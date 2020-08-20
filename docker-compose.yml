@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    entrypoint: gunicorn -b 0.0.0.0:5000 wsgi:app
+    environment:
+      SECRET_KEY: secret_key
+      VERSION: v1
+
+  nginx:
+    build: 
+      context: ./nginx
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - 80:80
+    depends_on:
+      - api
