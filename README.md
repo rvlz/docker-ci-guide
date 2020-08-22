@@ -406,13 +406,13 @@ dashboard and select docker-ci-demo. Click the *more options* button and select 
 The dashboard should look something like this.
 
 
-![Travis CI Repository Settings](/images/travis-ci-settings.png)
+![Travis CI Repository Settings](https://raw.githubusercontent.com/rvlz/rvlz.io/master/static/images/travis-ci-settings.png)
 
 In the *Environment Variables* section add your AWS information. Make sure that the variable values
 aren't included in the build logs and that they are only available in the staging branch—just to be
 extra cautious.
 
-![Travis CI Environment Variables](/images/travis-ci-env-vars.png)
+![Travis CI Environment Variables](https://raw.githubusercontent.com/rvlz/rvlz.io/master/static/images/travis-ci-env-vars.png)
 
 >> Remember to create an IAM user with sufficient permissions. Avoid using the root user to create
 >> resources; it should only be used for billing purposes.
@@ -512,7 +512,7 @@ doesn't exist on Amazon ECR! Head back to your AWS Management Console and go to 
 Elastic Container Registry Console. Click on the *Create repository* button and create a
 repository named *docker-ci-demo-api*.
 
-![Amazon ECR](/images/aws-ecr.png)
+![Amazon ECR](https://raw.githubusercontent.com/rvlz/rvlz.io/master/static/images/aws-ecr.png)
 
 Now switch to the *staging* branch, merge it with the *development* branch, and push.
 
@@ -524,7 +524,7 @@ $ git push
 
 Wait a minute; then check the repository on AWS. Voila!
 
-![Amazon ECR Repository](/images/aws-ecr-repo.png)
+![Amazon ECR Repository](https://raw.githubusercontent.com/rvlz/rvlz.io/master/static/images/aws-ecr.png)
 
 ### Workflow
 To be systematic, follow the steps below.
